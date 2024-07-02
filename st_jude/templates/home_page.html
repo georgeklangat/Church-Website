@@ -1,0 +1,133 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Jude Chaplaincy - Karatina University</title>
+   <link rel="stylesheet" href="{% static 'stjude_web/styles/home_page.css' %}">
+
+</head>
+<body>
+    <div>
+        <header>
+            <img src="/static/stjude_web/images/stjude2.jpg" alt="St. Jude Chaplaincy Logo" class="logo">
+            <h1>St. Jude Chaplaincy - Karatina University</h1>
+        </header>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <nav>
+        <!-- Navigation links go here -->
+        <a href="#dashboard">Dashboard</a>
+        <a href="#dailyReadings">Daily Readings</a>
+        <a href="#announcements">Announcements</a>
+        <a href="#departments">Departments</a>
+        <a href="#offertory">Offertory</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="#sermons">Sermons</a>
+        {% if user.is_authenticated %}
+        <li>Hello {{user.username}}</li>
+        <a href="{% url 'logout' %}">LOG OUT</a>
+        {% endif %}
+<!--                <li><a href="{% url 'register' %}">REGISTER</a></li>-->
+<!--                <li><a href="{% url 'login' %}">LOGIN</a></li>-->
+
+    </nav>
+<br>
+<br>
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <p>Welcome to our online portal. Stay connected with the chaplaincy's latest updates and events.</p>
+    </section>
+
+    <section id="dailyReadings">
+        <h2>Daily Readings</h2>
+        <!-- Display daily readings content here -->
+        <p>Today's Reading: [Reading Content]</p>
+    </section>
+
+    <section id="announcements">
+        <h2>Announcements</h2>
+        <!-- Display announcements content here -->
+        <ul>
+            <li>Important Announcement: [Announcement Text]</li>
+            <li>Upcoming Event: [Event Details]</li>
+        </ul>
+    </section>
+
+    <section id="departments">
+        <h2>Departments</h2>
+        <!-- Display department information here -->
+        <p>Explore the various departments within our chaplaincy, each serving a unique purpose in our community.</p>
+        <ul>
+            <li>Music Ministry</li>
+            <li>Youth Group</li>
+            <li>Social Outreach</li>
+        </ul>
+    </section>
+
+    <section id="offertory">
+        <h2>Offertory</h2>
+        <!-- Display offertory information here -->
+        <p>Support St. Jude Chaplaincy through your generous contributions. Mpesa Number: [Mpesa Number]</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <!-- Display gallery content here -->
+        <img src="/static/stjude_web/images/rosary-4978473.jpg" alt="Event 1">
+        <img src="images/event2.jpg" alt="Event 2">
+        <!-- Add more images as needed -->
+    </section>
+
+    <section id="events">
+        <h2>Events Calendar</h2>
+        <!-- Display events calendar here -->
+        <p>Upcoming Events:</p>
+        <ul>
+            <li>[Event Name] - [Date]</li>
+            <li>[Event Name] - [Date]</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <!-- Display contact information here -->
+        <p>Email: chaplaincy@karatinauniversity.com</p>
+        <p>Phone: [Contact Number]</p>
+    </section>
+
+    <section id="sermons">
+        <h2>Sermon Archives</h2>
+        <!-- Display sermon archives here -->
+        <ul>
+            <li>[Sermon Title] - [Date]</li>
+            <li>[Sermon Title] - [Date]</li>
+        </ul>
+    </section>
+
+    <section id="liveMass">
+        <h2>Live Mass Streaming</h2>
+        <!-- Paste the Facebook Live video embed code here -->
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FyourPageName%2Fvideos%2FyourVideoID%2F" width="500" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2024 St. Jude Chaplaincy - Karatina University</p>
+    </footer>
+
+</body>
+</html>

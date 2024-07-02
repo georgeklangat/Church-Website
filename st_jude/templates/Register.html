@@ -1,0 +1,17 @@
+{% extends 'Base.html'%}
+{% block content %}
+    <div>
+        <h1>Add Register to Database</h1>
+        <br/><br/>
+        {% if submitted %}
+            Registration Submitted Successfully!!!
+        {% else %}
+            <form action="{% url 'registration' %}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit" class="btn btn-secondary">
+
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}
