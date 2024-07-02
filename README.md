@@ -9,7 +9,6 @@ Welcome to the official website of St Jude Chaplaincy at Karatina University. Th
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
-- [HTML Template](#html-template)
 - [Contact](#contact)
 
 ## Introduction
