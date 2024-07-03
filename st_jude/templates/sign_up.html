@@ -1,7 +1,8 @@
+
+{% extends 'Base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+    {% block extra_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
@@ -37,7 +38,9 @@
             height: 35px;
         }
     </style>
-</head>
+
+    {% endblock %}
+
 <body>
 <div id="outer_form" class="container">
     <legend><h1>REGISTRATION FORM</h1></legend>

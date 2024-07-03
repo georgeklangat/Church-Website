@@ -1,15 +1,14 @@
-
+{% extends 'Base.html'%}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
+    {% block extra_head%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>St. Jude Chaplaincy - Karatina University</title>
    <link rel="stylesheet" href="{% static 'stjude_web/styles/home_page.css' %}">
+    {% endblock %}
 
-</head>
-<body>
+<!--body-->
+{% block content %}
     <div>
         <header>
             <img src="/static/stjude_web/images/stjude2.jpg" alt="St. Jude Chaplaincy Logo" class="logo">
@@ -129,5 +128,4 @@
         <p>&copy; 2024 St. Jude Chaplaincy - Karatina University</p>
     </footer>
 
-</body>
-</html>
+{% endblock %}
