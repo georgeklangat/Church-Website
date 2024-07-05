@@ -19,7 +19,7 @@
              width="100%"><h1>Welcome To St Jude Chaplaincy</h1></marquee>
     <nav>
         <a href="STJUDEWEB.html"><img src="{% static 'stjude_web/images/karu logo.png' %}"></a>
-        <div class="nav-links">
+        <div class="nav-links" style="background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/static/stjude_web/images/rosary-1215116.jpg)">
             <ul>
                 <li><a href="{% url 'login' %}">HOME</a></li>
                 <li><a href="https://web.facebook.com/StJudeKarU/about">ABOUT</a></li>
@@ -48,26 +48,15 @@
 
 <section class="Activities">
     <h1>Activities in the Chaplaincy</h1>
-    <p>St Jude Chaplaincy engages all Christians in strengthening the Faith through prayers, charity, socialization,
-        and Holy Mass</p>
+    <p>St Jude Chaplaincy engages all Christians in strengthening the Faith through prayers, charity, socialization, and Holy Mass</p>
 
     <div class="row">
-        <div class="Activities-col">
-            <h3>Prayers</h3>
-            <p>The small Christian community takes place every Monday
-                And Wednesday, where the students meet to pray Rosary, novenas, and other prayers.</p>
+        {% for activity in activities %}
+        <div class="Activities-col" style="background-image: url(/static/stjude_web/images/easter-735942.jpg)">
+            <h3>{{ activity.ActivityName }}</h3>
+            <p>{{ activity.description }}</p>
         </div>
-
-        <div class="Activities-col">
-            <h3>Charity</h3>
-            <p>The Chaplaincy takes part in helping needy students through the student-student initiative, and
-                through the SCC, students get in touch with each other as a family.</p>
-        </div>
-
-        <div class="Activities-col">
-            <h3>Eucharistic Mass</h3>
-            <p>The Chaplaincy holds Holy Eucharistic Mass during the week and every Sunday.</p>
-        </div>
+        {% endfor %}
     </div>
 </section>
 

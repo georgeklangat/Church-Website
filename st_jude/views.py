@@ -8,7 +8,9 @@ from .models import *
 
 
 def home(request):
-    return render(request, 'STJUDE_WEB.html')
+    activities = Activity.objects.all()
+    # print(activities)  # This should print the QuerySet in the console
+    return render(request, 'STJUDE_WEB.html', {'activities': activities})
 
 
 #

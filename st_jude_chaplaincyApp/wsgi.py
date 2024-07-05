@@ -1,5 +1,5 @@
 """
-WSGI config for st_jude_chaplaincy project.
+WSGI config for st_jude_chaplaincyApp project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'st_jude_chaplaincy.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'st_jude_chaplaincyApp.settings')
 
 application = get_wsgi_application()

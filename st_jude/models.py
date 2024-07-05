@@ -1,9 +1,4 @@
 from django.db import models
-# from built-in library
-from django.db import models
-
-
-# declare a new model with a name "GeeksModel"
 
 
 class Register(models.Model):
@@ -28,3 +23,13 @@ class Registration(models.Model):
 
     def __str__(self):
         return self.first_name
+
+
+class Activity(models.Model):
+    ActivityName = models.CharField(max_length=255)
+    description = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.ActivityName
+
+
