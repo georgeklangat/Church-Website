@@ -8,13 +8,11 @@ from .models import *
 
 
 def home(request):
-    activities = Activity.objects.all()
-    # print(activities)  # This should print the QuerySet in the console
-    return render(request, 'STJUDE_WEB.html', {'activities': activities})
+    galleries = Gallery.objects.all()
+    activities = Activity.objects.all()  # If you have activities in the context
+    return render(request, 'STJUDE_WEB.html', {'galleries': galleries, 'activities': activities})
 
 
-#
-#
 # def signup(request):
 #     return render(request, 'sign_up.html')
 
